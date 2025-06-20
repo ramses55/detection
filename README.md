@@ -4,7 +4,7 @@
 ![Python Version](https://img.shields.io/badge/python-3.11.2-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-A cross-platform Python script for detectin of people in video using Faster R-CNN.
+A cross-platform Python script for people detection in video using Faster R-CNN.
 
 ## Installation
 
@@ -17,6 +17,13 @@ A cross-platform Python script for detectin of people in video using Faster R-CN
    pip install -r requirements.txt
 
 ## Usage
+
+
 Basic command structre
 ```bash
 python3 main.py [-h] -f FILENAME [-o OUTPUT] [-t THRESHOLD]
+
+
+
+
+
