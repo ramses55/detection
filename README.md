@@ -1,7 +1,7 @@
 # detection
 # Command-Line Python Tool
 
-![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.11.2-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 A cross-platform Python script for [brief description of what your tool does].
