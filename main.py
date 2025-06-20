@@ -44,6 +44,7 @@ if not cap.isOpened():
 
 
 
+length = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = cap.get(cv2.CAP_PROP_FPS)
@@ -59,12 +60,18 @@ model.to(device)
 
 class_names = weights.meta["categories"]
 
-
+i=0
+print("Number of processed frames:")
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
         break
+    i+=1
+#    if i>200:
+#        break
 
+    if i % 100 == 0:
+        print(f"{i}/{length}")
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
     input_tensor = transform_numpy(rgb_frame)
@@ -85,7 +92,7 @@ while cap.isOpened():
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
             cv2.putText(frame, f'{class_name}: {score:.2f}',
                        (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5,
-                       (0, 255, 0), 2)
+                       (0, 255, 0), 1)
 
     out.write(frame)
 
