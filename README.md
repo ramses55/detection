@@ -22,8 +22,16 @@ A cross-platform Python script for people detection in video using Faster R-CNN.
 Basic command structre
 ```bash
 python3 main.py [-h] -f FILENAME [-o OUTPUT] [-t THRESHOLD]
-
-
-
-
+options:
+  -h, --help            show this help message and exit
+  -f FILENAME, --filename FILENAME
+                        Input video file to process
+  -o OUTPUT, --output OUTPUT
+                        Processed video name, default is "out.mp4"
+  -t THRESHOLD, --threshold THRESHOLD
+                        Confidenece threshold, default is 0.5
+```
+## Example 
+```bash
+python3 main.py -f crowd.mp4 -o result.mp4
 
