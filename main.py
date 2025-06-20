@@ -59,14 +59,10 @@ model.to(device)
 
 class_names = weights.meta["categories"]
 
-i=0
+
 while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
-        break
-
-    i+=1
-    if i>10:
         break
 
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
